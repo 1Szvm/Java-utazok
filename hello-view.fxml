@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.utazokgui.HelloController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Fájl">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onMegnyitasClick" text="Megynitás">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#onKilépesClick" text="Kilépés" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Sugó">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onNevjegyzekClikc" text="Névjegy" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Városok" />
+                  <ListView fx:id="lsVarosok" onMouseClicked="#renderUtazasok" prefHeight="300.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Utazások" />
+                  <ListView fx:id="lsUtazasok" prefHeight="300.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
